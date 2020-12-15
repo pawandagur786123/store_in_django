@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Enter new store</title>
+	<style type="text/css">
+	.intro-container {
+	  display: flex;
+	  flex-direction: column;
+	  justify-content: flex-start;
+	  align-items: flex-start;
+	  object-fit: contain;
+	  padding:  2vw 5vw;
+	  border: 0.5px solid grey;
+	}
+
+	p{
+   		text-align: center;
+   		font-style: italic;
+   		font-size: 30px;
+ 		font-family: "Helvetica", Georgia, Serif;
+	}
+	input:not([type=submit]){
+		padding:5px 10px;
+		width:30%;
+		margin-left: 10px;
+		margin-top: 1%;
+		margin-bottom: 1%;
+		color:black; font-size:15px;
+		border-radius: 10px; 
+	}
+	input[type=submit]{
+		padding:10px 20px;
+		color:white; font-size:15px;
+		border-radius: 10px;background-color:#62a6d1; 
+		margin-top: 5%;
+	}
+	.div_row2 {
+	  flex-direction: column;
+	  display: flex;
+	  
+	}
+	.head-container{
+    margin: auto;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+	.time-container{
+    width: 100%;
+    min-height: 24vw;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+}
+.div_container {
+    width:100%;
+    flex-direction: column;
+}
+.photo-container{
+    width: 100%;
+    height: 10vw;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    border: 0.1px solid lightgrey;
+    display: flex;
+}
+.image_div{
+	width: 100%;
+	margin-top: 2vw;
+	text-align: center;
+	border: 0.5px solid grey;
+}
+.time{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+	</style>
+
+</head>
+<body>
+	<form id="newstore" action="submit/" method="post" enctype="multipart/form-data" onsubmit="submit/" style="margin:auto; width: 80%">
+	<p><u>Create new store</u></p>
+	<div class="intro-container">
+	
+	<div style="width: 100%;">
+		<div style="text-align: center;">
+			<input type="text" id="newstoreinput" name="newstoreinput" placeholder="Name of store" style="width:50%; height: 1.8vw;" required></input>
+		</div>
+		<div class="img-container image_div">
+			<input type="file" id="cover_pic" name="cover_pic" style="margin-left: 5px; margin-top: 10px; margin-bottom: 10px;" value="" />
+		</div>
+</div>
+	<div class="time-container">
+		<div class="head-container">
+			<h4 style="text-align: center;">Store Hours</h4>
+		</div>
+		<div class="div_row2">
+			<div class="time">
+				<label id="Monday" name="Monday">Monday</label>
+				<input id="start-time" name="startTime" type="time" value="06:00" />
+				<input id="end-time" name="endTime" type="time" value="19:00" />
+			</div>
+			<div class="time">
+				<label id="Tuesday" name="Tuesday">Tuesday</label>
+				<input id="start-time" name="startTime" type="time" value="06:00" />
+				<input id="end-time" name="endTime" type="time" value="19:00" />
+			</div>
+			<div class="time">
+				<label id="Wednesday" name="Wednesday">Wednesday</label>
+				<input id="start-time" name="startTime" type="time" value="06:00" />
+				<input id="end-time" name="endTime" type="time" value="19:00" />
+			</div>
+			<div class="time">
+				<label id="Thursday" name="Thursday">Thursday</label>
+				<input id="start-time" name="startTime" type="time" value="06:00" />
+				<input id="end-time" name="endTime" type="time" value="19:00" />
+			</div>
+			<div class="time">
+				<label id="Friday" name="Friday">Friday</label>
+				<input id="start-time" name="startTime" type="time" value="06:00" />
+				<input id="end-time" name="endTime" type="time" value="19:00" />
+			</div>
+			<div class="time">
+				<label id="Saturday" name="Saturday"> Saturday</label>
+				<input id="start-time" name="startTime" type="time" value="06:00" />
+				<input id="end-time" name="endTime" type="time" value="19:00" />
+			</div>
+			<div class="time">
+				<label id="Sunday" name="Sunday"> Sunday</label>
+				<input id="start-time" name="startTime" type="time" value="06:00" />
+				<input id="end-time" name="endTime" type="time" value="19:00" />
+			</div>
+		</div>
+	</div>
+<div style="width: 100%; display: flex;">
+<div class="div_container">
+<h4 style="text-align: center;">Gallery</h4>
+<div class="photo-container">
+	<input id="gallery_pics" name="gallery_pics" accept="image/gif,image/jpeg,image/jpg,image/png,video/mp4,video/x-m4v" multiple="multiple" type="file" />
+</div>
+<div class="about-us" style="display: flex; flex-direction: column; justify-content: center; align-items: center; padding: 0.1vw;">
+<h4>About us</h4>
+<textarea id="about_us" cols="100" name="description" rows="10"></textarea></div>
+</div>
+</div>
+<input type="submit" style="margin: auto;margin-top: 40px;" value="submit"></input>
+</div>
+</div>
+
+<script type="text/javascript">
+var myForm = document.getElementById('newstore');
+myForm.onsubmit = function() {
+window.location.href = "submit/";
+};
+</script>
+</form>
+</body>
+</html>

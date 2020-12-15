@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>{{ name }}</title>
+	<meta charset ="utf-8" http-equiv="X-UA-Compatible"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=yes">
+	<link rel="stylesheet" type="text/css" href="/static/css/onestore.css">
+
+</head>
+<body>
+
+	<img src={{media_url}}{{image}} id="" style="height: 30vw;display: block;margin-left: auto;margin-right: auto;">	
+	<div id="desc">
+	<h1><u>Store name: {{ name }}</u></h1>
+		<p><b>Store Details</b></p>
+		<p>{{description}}</p>
+	</div>
+	<div id="desc">
+	<h1>Opening Time</h1>
+	<table>
+		{% for weekday in day_arr %}
+		    <tr> 
+		        <td style="width:30%">{{weekday.day}}</td>
+		        <td style="width:30%">{{weekday.start_time}}</td>
+		        <td style="width:30%">{{weekday.end_time}}</td>
+		    </tr>
+	    {% endfor %}
+	</table>
+
+	<div id="div1">
+		{% for image in galleryimage %}
+	    <div id="pic1"><A HREF={{image}}><img src={{image}} id="pic1" style="width:100%;height:100%"></A></div>
+		{% endfor %}
+	</div>
+
+	 <script type="text/javascript">
+
+	</script>
+</body>
+</html>
